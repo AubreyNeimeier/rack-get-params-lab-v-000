@@ -21,6 +21,10 @@ class Application
       elsif
         resp.write "Your cart is empty"
       end
+    elsif req.path.match(/add/)
+      item_to_add = req.params["item"]
+      resp.write add_to_cart(search_term)
+
     else
       resp.write "Path Not Found"
     end
