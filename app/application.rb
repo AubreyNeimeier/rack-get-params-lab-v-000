@@ -27,9 +27,7 @@ class Application
     else
       resp.write "Path Not Found"
     end
-
-    resp.finish
-  end
+  resp.finish
 
   def handle_search(search_term)
     if @@items.include?(search_term)
