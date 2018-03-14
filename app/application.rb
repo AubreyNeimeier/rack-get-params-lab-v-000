@@ -19,8 +19,10 @@ class Application
     end
 
     if req.path.match(/cart/)
-      @@items.each do |item|
+      if @@items.each do |item|
         resp.write "#{item}\n"
+      elsif 
+        resp.write "There cart is empty"
       end
 
 
