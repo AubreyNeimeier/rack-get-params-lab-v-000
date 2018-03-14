@@ -40,5 +40,12 @@ class Application
     end
   end
 
+  def add_to_cart(item_to_add)
+    if @@items.include?(item_to_add)
+      return "added #{item_to_add}"
+    else
+      return "We don't have that item"
+    end
+
 
 end
